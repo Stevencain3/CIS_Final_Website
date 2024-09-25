@@ -1,8 +1,6 @@
 # Caduca Crafts Website
 
-**Website URL:** [Caduca Crafts](#)
-
-This project is a fully responsive e-commerce website for **Caduca Crafts**, an online store that offers handcrafted products such as tumblers, shirts, jewelry, and custom gifts. The site is designed with a focus on ease of navigation, aesthetic appeal, and functionality for users.
+This project is a responsive e-commerce website for **Caduca Crafts**, an online store owned by my sister, that offers handcrafted products such as tumblers, shirts, jewelry, and custom gifts. The site is designed with a focus on ease of navigation, aesthetic appeal, and functionality for users. I still havent finished the purchasing page with functianality as im waiting to see what payment proccessing they want to use.
 
 ---
 
@@ -52,10 +50,8 @@ Caduca Crafts is a creative platform for selling custom and handmade crafts. The
 
    ```bash
    git clone https://github.com/Stevencain3/CIS_Final_Websitecaduca-crafts/
-2. **Navigate to the Project Directory:**
-
- ```bash
    cd caduca-crafts
 
--**Run the Project:**
+
+2. Run the Project:**
 -**Open Index.html in your browser to view the website locally.**
