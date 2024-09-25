@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title> Caduca Crafts | Custom Orders </title>
+		<!--Steven Cain-->
+		<meta charset = "utf-8">
+		<link href = "Caduca.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	</head>
+
+   
+ 
+  
+<body>
+    <header id = "header">
+	   <div class="logo-container">
+			<img src="Images/Logos/UpdatedLogo_Transs.png" alt="CaDuca Crafts Logo">
+		</div>
+			<nav class = "animated-underline">				<ul>
+					<li><a href="Index.html">Home</a></li>
+					<li><a href="Pricing.html">Pricing</a></li>
+					<li><a href="custom.html">Custom Orders</a></li>
+					<li><a href="Contact.html">Contact</a></li>
+				</ul>
+			</nav>
+    </header>
+
+	
+		<main>
+			<section id="custom-order-instructions" class = "upload-container">
+			<div class="instructions">
+                <h2>How to Submit Your Custom Design</h2>
+					<ol>
+						<li><strong>Choose Your Image:</strong> Select high-quality images (JPEG, PNG, TIFF). Maximum size 10MB.</li>
+						<li><strong>Adjust Your Image:</strong> Resize to fit our product dimensions</li>
+							<ul>
+								<li> Shirts: 12"x16"</li>
+								<li> Tumblers: 8"x3"</li>
+							</ul>
+						<li><strong>Upload and Preview:</strong> Use our tool to position your image on the product.</li>
+						<li><strong>Submit and Confirm:</strong> Add to cart, checkout, and approve via email confirmation.</li>
+						<li><strong>Approval and Production:</strong> Production takes 5-7 business days post-approval.</li>
+					</ol>
+			</div>
+			<div class="file-upload">
+                <form action="upload.php" method="post" enctype="multipart/form-data">
+                    <label for="fileUpload">Upload your image:</label>
+                    <input type="file" id="fileUpload" name="fileUpload" required>
+                    <button type="submit">Submit Design</button>
+                </form>
+			</div>
+            </section>
+			
+			
+        </main>
+
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/CaDucaCrafts"><img src="Images/Icons/facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/caduca_crafts/"><img src="Images/Icons/instagram.png" alt="Instagram"></a>
+            <a href="mailto:caducacrafts@gmail.com?subject=Inquiry%20about%20Crafts&body=Hello,%20I%20am%20interested%20in%20learning%20more%20about%20your%20crafts.%0APlease%20send%20me%20more%20information.%0AThank%20you!">
+            <a href="window.location.href='tel:+1234567890';"><img src="Images/Icons/phone.png" alt="Phone"></a>
+        </div>
+        <p>&copy; 2024 CaDuca Crafts</p>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            $('a[href*="#"]').on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $($(this).attr('href')).offset().top
+                }, 500, 'swing');
+            });
+            $(window).scroll(function() {
+                var scroll = $(window).scrollTop();
+                if (scroll > 50) {
+                    $('#header img').addClass('scrolled');
+                    $('nav').addClass('scrolled');
+                } else {
+                    $('#header img').removeClass('scrolled');
+                    $('nav').removeClass('scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

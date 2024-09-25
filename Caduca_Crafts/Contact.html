@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title> Caduca Crafts | Contact Us </title>
+		<!--Steven Cain-->
+		<meta charset = "utf-8">
+		<link href = "Caduca.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	</head>
+
+  
+<body class = "custom-page">
+    <header id = "header">
+	   <div class="logo-container">
+			<img src="Images/Logos/UpdatedLogo_Transs.png" alt="CaDuca Crafts Logo">
+			</div>
+        <nav class = "animated-underline">
+            <ul>
+                  <li><a href="Index.html">Home</a></li>
+                 <li><a href="Pricing.html">Pricing</a></li>
+                <li><a href="custom.html">Custom Orders</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header >
+	
+	<div class ="wrapper contact-us" >
+	
+		<main id="message-form">
+			<section id = "contact-us">
+				<h2>Contact Us</h2>
+				<p>For inquiries, support, or feedback, please use the form below email, or call us directly at:</p>
+					<button onclick="window.location.href='tel:+1(308) 660-1146';">(308)  660 - 1146</button>
+					<button onclick ="window.location.href='mailto:caducacrafts@gmail.com';"> Our Email</button>    
+					
+			</section>
+		
+
+		<div class ="contact-container">
+				
+				<section class="form-container">
+				<h2>Send Us a Message</h2>
+					<form action="your-server-side-code" method="POST">
+						<label for="name">Name:</label>
+						<input type="text" id="name" name="name" required>
+						<label for="email">Email:</label>
+						<input type="email" id="email" name="email" required>
+						<label for="message">Message:</label>
+						<textarea id="message" name="message" required></textarea>
+						<button type="submit">Send</button>
+					</form>
+				</section>
+				
+			<section id="map-section">
+				<h2>Find Us</h2>
+				  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26249.81246284932!2d-83.96184196580627!3d35.96063805024705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885c162859db2cb9%3A0x1234abcd!2sKnoxville%2C%20TN%2C%20USA!5e0!3m2!1sen!2sus!4vXXXXXXXXXXXX"
+				   width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				   
+			</section>
+	
+		</div>
+	  </div>
+ </body>
+		<footer>
+			<div class = "social-icons">
+                <a href="https://www.facebook.com/CaDucaCrafts"><img src="Images/Icons/facebook.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/caduca_crafts/"><img src="Images/Icons/instagram.png" alt="Instagram"></a>
+				<a href="mailto:caducacrafts@gmail.com?subject=Inquiry%20about%20Crafts&body=Hello,%20I%20am%20interested%20in%20learning%20more%20about%20your%20crafts.%0APlease%20send%20me%20more%20information.%0AThank%20you!">
+				<a href='tel:+1234567890';><img src="Images/Icons/phone.png" alt="Call us"></a>
+			</div>
+			<p>&copy; 2024 CaDuca Crafts</p>
+		</footer>
+
+	
+			<script>
+				$(document).ready(function() {
+				// Smooth scroll for all links
+				$('a[href*="#"]').on('click', function(e) {
+				e.preventDefault();
+
+				$('html, body').animate({
+				  scrollTop: $($(this).attr('href')).offset().top
+				}, 500, 'swing');
+				});
+
+				// Resizing the logo
+				$(window).scroll(function() {
+				var scroll = $(window).scrollTop();
+				if (scroll > 50) {
+				  $('#header img').addClass('scrolled');
+				  $('nav').addClass('scrolled');
+				} else {
+				  $('#header img').removeClass('scrolled');
+					  $('nav').removeClass('scrolled');
+				}
+				});
+				});
+			</script>
+		</main> 
+
+
+	
+
+</html>

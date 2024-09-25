@@ -1,0 +1,503 @@
+/*Steven Cain*/
+/*CaDuca Crafts CSS*/
+
+
+/*Color codes 
+English Violet #403D58
+Platinum #DBD9DB
+Cherry Blossom Pink #E6ABB7
+Anti-Flash White #E5EBEA
+Verdigris #73ABAB 
+*/
+
+
+/*
+//
+//
+//    Styling For All
+//
+//
+*/
+
+
+
+main {
+  margin-top: 325px; /* adjust the value to match the height of your header */
+}
+
+
+
+#wrapper{ 
+			padding-top: 100px;	
+	    }
+
+body {
+	font-family: 'Arial', sans-serif;
+	line-height: 1.6;
+	color: #333;
+	padding-top: 100px;
+	background-color: #F4F6F6; /* Light blue, assumed from the logo */	
+	}
+
+
+
+#header img {
+  width:400px; /* Original size */
+  transition: width 0.5s ease;
+	}
+
+#header img.scrolled {
+  width: 200px; /* Smaller size when scrolled */
+  }
+
+
+#header {
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  background-color:  #1A374D;
+	  padding: 1em 2em;
+	  box-sizing: border-box;
+	  text-align: center;
+	  border-radius: 5px;
+	z-index: 10;
+}
+	
+
+nav ul {
+	list-style: none;
+	}
+
+nav li {
+	display: inline;
+	margin-right: 20px;
+	}
+
+nav a {
+	text-decoration: none;
+	color: #F1DDBF; /* Beige from the logo */
+	}
+	
+
+
+
+#banner {
+	background-color: #F1DDBF; /* Beige from the logo */
+	color: #1A374D; /* Dark blue from the logo */
+	padding: 2em;
+	text-align: center;
+	}
+
+#body-color{
+	padding: 2em;
+	background-color: #F4F6F6; /* background color */
+	 border-left: 4px solid #5C7AEA;  /* Blue accent on the left */
+	}
+
+button {
+	
+	background-color: #EE6D82; /* Pink from the logo */
+	color: white;
+	border: none;
+	padding: 0.5em 1em;
+	cursor: pointer;
+	border-radius: 8px;
+	}
+
+button:hover {
+	background-color: #F07F92
+	
+	}
+	
+	.animated-underline li {
+    display: inline-block;
+    position: relative;
+    color: black;
+    text-decoration: none;
+}
+
+.animated-underline li::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #EE6D82;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.animated-underline li:hover::after {
+    visibility: visible;
+    width: 110%;
+	
+}
+	
+footer {
+    display: flex; /* Enables Flexbox */
+    align-items: center; /* Vertically centers the items in the footer */
+    justify-content: space-between; /* Spaces items evenly, pushing them to the edges */
+    padding: 20px;
+    background-color: #1A374D; 
+	text-align: center;
+	border-radius: 5px;
+}
+
+
+footer .social-icons img {
+    vertical-align: middle; /* Aligns icons to the middle vertically relative to each other */
+    width: 40px; /* Icon width */
+    height: 40px; /* Icon height */
+	padding-left: 15px;
+}
+
+footer p {
+	margin: 0;
+	Color: White;
+	}
+
+.flex-container {
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Vertically centers the items in the container */
+    gap: 3%; /* Adds space between the image and the text */
+	
+}
+
+
+.about-image {
+	border-radius: 20px;
+    width: 100%; /* Responsive width */
+    max-width: 300px; /* Maximum width */
+    height: auto; /* Maintain aspect ratio */
+    flex-shrink: 0; /* Prevents the image from shrinking */
+	margin-top: 35px;
+ margin-left: 20%;
+
+	
+}
+
+	
+
+
+.about-text {
+    flex-grow: 1; /* Allows the text block to grow and fill available space */
+	 
+}
+
+
+.gallery-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  max-width: 300px; /* Adjust based on layout needs */
+  margin: 10px;
+  transition: transform 0.4s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.1); /* Simple hover effect */
+  z-index: 1;
+}
+
+.bottom-text 
+{
+	
+	text-align: center;
+}
+.dot-underline{
+	 text-decoration: none;
+    border-bottom: 3px dotted black;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/*
+//
+//
+//    Styling For the Pricing
+//
+//
+*/
+
+.products {
+    display: flex;
+    flex-wrap: wrap;  /* Allows products to wrap onto the next line if not enough space */
+    justify-content: space-around;  /* Distributes space around items for even spacing */
+    align-items: flex-start;  /* Aligns items at the start of the flex container */
+}
+
+.product {
+    border: 1px solid #ccc;
+	border-radius: 20px;
+	background-Color: #F1DDBF;
+    padding: 10px;
+	margin-top: 40px;
+    margin-bottom: 20px;
+    width: 300px;
+	flex: 0 1 300px;  /* Flex-grow, flex-shrink, and flex-basis */
+   
+}
+
+.product h2 {
+    color: #333;
+}
+
+.product .price {
+    color: green;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.slideshow {
+    position: relative;
+    width: 75%; /* Adjust based on your design needs */
+    height: 250px; /* Adjust based on your design needs */
+    overflow: hidden;
+}
+
+.slideshow img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+	object-fit: fill; 
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slideshow video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+//
+//
+//    Styling For the Contact Page
+//
+//
+*/
+form {
+    max-width: 600px;
+	margin: 20px auto;
+	margin-top:65px;
+    padding: 20px;
+    border: 1px solid #DBD9DB; /* Using the Platinum color from your palette */
+    background-color: #DCE4E3; /* Anti-Flash White */
+}
+
+input[type="text"],
+input[type="email"],
+
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #73ABAB; /* Verdigris color */
+    border-radius: 4px;
+}
+
+
+.contact-container {
+    
+	display: flex;
+    justify-content: space-between; /* Aligns items to space between them */
+    align-items: start; /* Aligns items to start vertically */
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    margin: 20px; /* Optional: Adds some margin around the container */
+	margin-left: 10%;
+	
+}
+
+
+#message-form, #map-section {
+    flex: 1 1 45%; /* Each section takes about 45% of the container width */
+    padding: 10px; /* Optional: Adds some padding inside each section */
+	
+}
+
+#contact-us
+{
+padding-top: 2%;
+text-align: center;
+
+}
+
+.contact-us h2 {
+    text-align: center;
+	
+}
+
+.custom-page 
+{
+	border-left: 4px solid #5C7AEA;  /* Blue accent on the left */
+}
+
+
+.form-container form {
+	border: 1px solid #1A374D;  /*border on contact form */
+   	border-radius: 15px;
+	padding: 25px; /* Adds padding inside the container */
+	
+}
+
+/* Additional responsive behavior for smaller screens */
+@media (max-width: 800px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    #message-form, #map-section {
+        flex-basis: 100%; /* Each section takes full width on small screens */
+    }
+}
+
+/* Google Map Styling */
+iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    display: block;
+    margin: 20px auto;
+	border-radius: 10px;
+	
+}
+
+
+
+
+
+
+
+
+
+/*
+//
+//
+//    Styling For the Custom Order Page
+//
+//
+*/
+
+#custom-order-instructions {
+    background-color: #f9f9f9;  /* Light grey background */
+    border-left: 4px solid #5C7AEA;  /* Blue accent on the left */
+    padding: 15px;
+	padding-top: 30px; /* Adds space above the section */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Subtle shadow for depth */
+
+}
+
+#custom-order-instructions h2 {
+    color: #333;  /* Dark grey color for heading */
+    font-size: 29px;  /* Larger font size for heading */
+    margin-bottom: 15px;  /* Space below the heading */
+	margin-top: 30px; 
+
+}
+
+#custom-order-instructions ol {
+    list-style-position: inside;  /* Positioning the list marker inside for better alignment */
+    padding-left: 5%;  /* Remove padding to align with the content above */
+	 line-height: 1.8;  /* Adequate line height for readability */
+
+}
+#custom-order-instructions ul {
+    list-style-position: inside;  /* Positioning the list marker inside for better alignment */
+    padding-left: 20%;  /* Remove padding to align with the content above */
+    line-height: 1.4;
+}
+
+#custom-order-instructions li {
+    margin-bottom: 10px;  /* Space between list items */
+    font-size: 18px;  /* Readable font size for text */
+   
+}
+
+#custom-order-instructions form {
+    margin-top: 20px;  /* Space above the form */
+	Padding: 25px;
+	border-radius: 10px;
+	border: 1px solid #1A374D;
+}
+
+#custom-order-instructions label {
+    font-weight: bold;  /* Bold font for labels */
+    margin-bottom: 5px;  /* Space below each label */
+}
+
+#custom-order-instructions input[type="file"],
+#custom-order-instructions button {
+    font-size: 14px;  /* Uniform font size for form elements */
+    width: 100%;  /* Full width for better mobile responsiveness */
+    padding: 10px;  /* Padding for better touch interaction */
+    margin-top: 5px;  /* Space above each form element */
+}
+
+#custom-order-instructions button {
+    background-color: #EE6D82;  /* Green button for actions */
+    color: white;  /* White text for contrast */
+    border: none;  /* No border for a cleaner look */
+    cursor: pointer;  /* Cursor pointer to indicate clickable */
+}
+
+#custom-order-instructions button:hover {
+    background-color: #F07F92;  /* Slightly darker green on hover */
+}
+
+.upload-container {
+    display: flex;  /* Sets the container to a flex container */
+    align-items: center;  /* Vertically aligns the children in the middle */
+    justify-content: space-between;  /* Adds space between the two children */
+    padding: 20px;  /* Optional: Adds some padding inside the container */
+
+	
+}
+
+.instructions, .file-upload {
+    flex: 1;  /* Each child will take up equal amount of space */
+    padding: 10px;  /* Optional: Adds padding inside each child */
+}
+
+/* Optional: Additional styling to improve visibility and layout */
+.instructions {
+    margin-left: 2%;  /* Adds a margin to the right of the instructions */
+}
+
+
+.file-upload {
+    max-width: 500px;  /* Limits the width of the file upload form */
+	margin-right: 9%;
+	
+}
+
+
+

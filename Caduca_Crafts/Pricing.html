@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caduca Crafts | Shop</title>
+    <link rel="stylesheet" href="Caduca.css">
+</head>
+<body>
+     <header id = "header">
+	   <div class="logo-container">
+			<img src="Images/Logos/UpdatedLogo_Transs.png" alt="CaDuca Crafts Logo">
+			</div>
+        <nav class = "animated-underline">
+            <ul>
+                  <li><a href="Index.html">Home</a></li>
+                <li><a href="Pricing.html">Pricing</a></li>
+               <li><a href="custom.html">Custom Orders</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+	
+	
+	
+	<div class = "wrapper">
+   <main>
+    <section  id = "body-color">
+		<div class = "products">
+			<div class="product">
+				<h2>Tumbler Cup</h2>
+				<div class="slideshow">
+					<img src="Images/Tumblers/file.png" alt="Description of Image 1">
+					<img src="Images/Tumblers/milwalkee.png" alt="Milwalkie"style="display:none;">
+					<img src="Images/Tumblers/chucky.png" alt="Chucky tumbler"style="display:none;">
+				</div>
+				<p class="price">$29.99</p>
+				<button class="button" onclick="sendEmail('tumblers')">Buy Tumblers</button>
+			</div>
+			
+			<div class="product">
+				<h2>Purses</h2>
+				<div class="slideshow">
+					<img src="Images/Bags/bag_1.png" alt="Description of Image 1">
+					<img src="Images/Bags/bag_2.png" alt="Description of Image 2"style="display:none;">
+					<img src="Images/Bags/bag_3.png" alt="Description of Image 3"style="display:none;">
+				</div>
+				<p class="price">$25.99</p>
+                  <button class="button" onclick="sendEmail('bags')">Buy Bags</button>
+			</div>
+			
+			<div class="product">
+				<h2>Jewlery</h2>
+				<div class="slideshow">
+					<img src="Images/Jewelry/jewls_1.png" alt="Description of Image 1">
+					<img src="Images/Jewelry/jewls_2.png" alt="Description of Image 2"style="display:none;">
+					<img src="Images/Jewelry/jewls_3.png" alt="Description of Image 3"style="display:none;">
+				</div>
+				<p class="price">$10.99</p>
+				<button class="button" onclick="sendEmail('jewelry')">Buy Jewelry</button>
+			</div>
+			
+			<div class="product">
+				<h2>Hoodies And Shirts</h2>
+				<div class="slideshow">
+					<img src="Images/Clothes/100_hoodie.png" alt="The 100 Hoodie">
+			<img src="Images/Clothes/Outta_shirt.png" alt="Straight Outta Compton Shirt"style="display:none;">
+			<img src="Images/Clothes/whatever_shirt.png" alt="Whatever. Shirt"style="display:none;">
+				</div>
+				<p class="price">$19.99</p>
+			<button class="button" onclick="sendEmail('shirts')">Buy Shirts and Hoodies</button>
+			</div>
+			
+			
+		</div>
+		
+	</section>
+	
+	<footer>
+		<div class = "social-icons">
+                 <a href="https://www.facebook.com/CaDucaCrafts"><img src="Images/Icons/facebook.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/caduca_crafts/"><img src="Images/Icons/instagram.png" alt="Instagram"></a>
+				<a href="mailto:caducacrafts@gmail.com?subject=Inquiry%20about%20Crafts&body=Hello,%20I%20am%20interested%20in%20learning%20more%20about%20your%20crafts.%0APlease%20send%20me%20more%20information.%0AThank%20you!">
+				<img src="Images/Icons/email.png" alt="Our Email">
+</a>
+
+				<a href="window.location.href='tel:+1234567890';"><img src="Images/Icons/phone.png" alt="Phone"></a>
+		</div>
+			<p>&copy; 2024 CaDuca Crafts</p>
+	</footer>
+
+	
+    <script>
+        // JavaScript for slideshow functionality
+        document.querySelectorAll('.slideshow').forEach(slideshow => {
+            let currentImageIndex = 0;
+            const images = slideshow.querySelectorAll('img');
+            setInterval(() => {
+                images[currentImageIndex].style.display = 'none';
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                images[currentImageIndex].style.display = 'block';
+            }, 3000); // Change image every 3000 ms
+        });
+		
+	document.querySelectorAll('.slideshow').forEach(slideshow => {
+    const videos = slideshow.querySelectorAll('video');
+    let currentVideoIndex = 0;
+
+    videos.forEach((video, index) => {
+        video.onended = () => {
+            video.style.display = 'none';
+            currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+            videos[currentVideoIndex].style.display = 'block';
+            videos[currentVideoIndex].play();
+        };
+    });
+
+    // Auto-play the first video
+    videos[0].style.display = 'block';
+    videos[0].play();
+});
+		$(document).ready(function() {
+			// Smooth scroll for all links
+			$('a[href*="#"]').on('click', function(e) {
+			e.preventDefault();
+
+			$('html, body').animate({
+			  scrollTop: $($(this).attr('href')).offset().top
+			}, 500, 'swing');
+			});
+
+			// Resizing the logo
+			$(window).scroll(function() {
+			var scroll = $(window).scrollTop();
+			if (scroll > 50) {
+			  $('#header img').addClass('scrolled');
+			  $('nav').addClass('scrolled');
+			} else {
+			  $('#header img').removeClass('scrolled');
+				  $('nav').removeClass('scrolled');
+			}
+			});
+			});
+			
+			function sendEmail(product) {
+    var email = 'caducacrafts@gmail.com';
+    var subject, body;
+
+    switch(product) {
+        case 'shirts':
+            subject = encodeURIComponent('Inquiry about Shirts and Hoodies');
+            body = encodeURIComponent('Hello, I am interested in purchasing shirts and hoodies. Please provide more details.');
+            break;
+        case 'tumblers':
+            subject = encodeURIComponent('Inquiry about Tumblers');
+            body = encodeURIComponent('Hello, I am interested in purchasing tumblers. Could you send me more information and pricing details?');
+            break;
+        case 'bags':
+            subject = encodeURIComponent('Inquiry about Bags');
+            body = encodeURIComponent('Hello, I would like to know more about the different types of bags you offer. Please send me details and pricing.');
+            break;
+        case 'jewelry':
+            subject = encodeURIComponent('Inquiry about Jewelry');
+            body = encodeURIComponent('Hello, I am interested in your jewelry collection. Can you provide more information on the available pieces and their prices?');
+            break;
+    }
+
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+}
+			
+    </script>
+	`</main>
+	</div>
+</body>
+</html>
