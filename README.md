@@ -52,12 +52,10 @@ Caduca Crafts is a creative platform for selling custom and handmade crafts. The
 
    ```bash
    git clone https://github.com/Stevencain3/CIS_Final_Websitecaduca-crafts/
+2. **Navigate to the Project Directory:**
 
-├── index.html            # Homepage
-├── pricing.html          # Product and pricing page
-├── custom.html           # Custom order submission page
-├── contact.html          # Contact page
-├── Caduca.css            # Stylesheet
-├── Images/               # Images and icons used in the project
-├── upload.php            # (For future use) PHP script for handling file uploads
-└── README.md             # Project documentation (this file)
+ ```bash
+   cd caduca-crafts
+
+-**Run the Project:**
+-**Open Index.html in your browser to view the website locally.**
